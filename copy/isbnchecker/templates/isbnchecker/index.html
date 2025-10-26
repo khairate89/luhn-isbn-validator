@@ -1,0 +1,12 @@
+<h1>ISBN Book Checker</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Check ISBN</button>
+</form>
+
+{% if result %}
+  <h3>Result:</h3>
+  <pre>{{ result }}</pre>
+{% endif %}
